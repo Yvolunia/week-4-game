@@ -28,11 +28,19 @@ body {
 	color: #4dc3ff;
 }
 
+#playButton {
+	padding: 25px;
+	margin-left: 25px;
+	margin-top: 25px;
+	text-align: center;
+
+}
+
 #originalNumber {
 	padding: 25px;
 	margin-left: 25px;
 	margin-top: 25px;
-	text-align: left;
+	text-align: center;
 	height: 100px;
 	background-color: #00cc99;
 	font-weight: bold;
