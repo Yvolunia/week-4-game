@@ -96,9 +96,8 @@
 
  <div class="row">
       <div class="col-sm-2">
-        <div id="finalNumber">
-          <p>Final Number</p>
-        </div>
+        <h3 id="finalNumber">
+        </h3>
       </div>
     </div>
 
@@ -129,18 +128,21 @@ function initialize() {
   var green = "";
   var white = "";
   var blue = "";
-  var result = "";
+  var crystalNumber = "";
   isButtonClicked = false;
   isCalculated = false;
 
   $("originalRandom").empty();
 } // End initialize
 
-// Add on click listener to all crystals
+// Click Play to set Random Numbers
 
 $("#playButton").on("click", function() {
   var x = Math.floor((Math.random() * 119) +1);
   document.getElementById("originalRandom").innerHTML = x;
+  var result = 0;
+  document.getElementById("finalNumber").innerHTML = result;
+  console.log(result)
   var yellow =  Math.floor((Math.random() * 11) + 1);
   console.log(yellow);
   var green =  Math.floor((Math.random() * 11) + 1);
