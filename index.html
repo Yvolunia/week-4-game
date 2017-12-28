@@ -135,7 +135,7 @@ function initialize() {
 // Click Play to set Random Numbers
 
 $("#playButton").on("click", function() {
-  x = Math.floor((Math.random() * 119) +1);
+  x = Math.floor((Math.random() * 101) +19);
   document.getElementById("originalRandom").innerHTML = x;
   result = 0;
   document.getElementById("finalNumber").innerHTML = result;
@@ -148,7 +148,7 @@ $("#playButton").on("click", function() {
   console.log(white);
   blue =  Math.floor((Math.random() * 11) + 1);
   console.log(blue);
-
+  $(".play-buttons").show();
  })
 
 // Add numbers
@@ -196,11 +196,13 @@ function score () {
    if (result > x){
     losses++;
     $("#L").html('Losses:' + "" + losses)
+    $(".play-buttons").hide();
    }
 
    if (result === x) {
     wins++;
     $("#W").html('Wins:' + "" + wins)
+    $(".play-buttons").hide();
    };
 
 };
